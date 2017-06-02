@@ -1,0 +1,262 @@
+/* Notification for Multiple Contacts styles
+__________________________________________________________*/
+.notification .multiple_contacts_names {
+  color: #898989;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+  position: relative;
+  *display: inline;
+  *zoom: 1;
+}
+
+.notification .multiple_contacts_list {
+  background: #000;
+  background: rgba(0,0,0,0.8);
+  border-radius: 8px;
+  left: -15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  width: 500px;
+}
+
+.notification .multiple_contacts_list .multiple_contact {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.3em;
+}
+
+.notification .multiple_contacts_link {
+  display: inline-block;
+  float: right;
+  *display: inline;
+  *zoom: 1;
+}
+
+.notification.orange .multiple_contacts_names { color: #b95d00; }
+.notification.green .multiple_contacts_names { color: #1c8a13; }
+.notification.blue .multiple_contacts_names { color: #375289; }
+.notification.red .multiple_contacts_names { color: #bd1e2d; }
+
+
+/* Override all styles
+__________________________________________________________*/
+.override_all.form {
+  background: #da781b;
+  border: 3px solid #9a4200;
+}
+
+.override_all .override_header {
+  color: #6d1c00;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.override_all.form fieldset label {
+  color: #6d1c00;
+}
+
+
+/* Form styles
+__________________________________________________________*/
+.form {
+  background: #fff;
+  border: 3px solid #aaa;
+  border-radius: 8px;
+  margin: 30px 0 0 0;
+  padding: 25px;
+}
+
+.form.disabled {
+  background: #999;
+}
+
+.form fieldset {
+  border: 0;
+  margin: 0 0 20px 0;
+  padding: 0;
+  /* width: 784px; */
+}
+
+.form fieldset.cols > .col {
+  float: left;
+  margin-right: 2%;
+  width: 98%;
+}
+
+.form fieldset.cols > .col_half {
+  width: 48%;
+}
+
+.form fieldset.cols > .col_quarter {
+  width: 23%;
+}
+
+.form fieldset label {
+  color: #666666;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form fieldset label sup {
+  font-size: 16px;
+  line-height: 0;
+  position: relative;
+  top:6px;
+}
+
+.form fieldset .col > select {
+  width: 100%;
+}
+
+.form fieldset .col > input[type=text],
+.form fieldset .col > textarea {
+  /* subtract 18px of padding for the sides (98% of fieldset = 768) */
+  width: 750px;
+}
+
+.form fieldset .col_half > input[type=text],
+.form fieldset .col_half > textarea {
+  /* subtract 18px of padding for the sides (48% of fieldset = 376) */
+  width: 358px;
+}
+
+.form fieldset .col_quarter > input[type=text],
+.form fieldset .col_quarter > textarea {
+  /* subtract 18px of padding for the sides (23% of fieldset = 180) */
+  width: 162px;
+}
+
+.form fieldset .col.error select {
+  border-color: #d55;
+}
+
+.form fieldset .col.error input {
+  border-color: #d55;
+  box-shadow: 1px 1px 3px rgba(221, 85, 85, 0.3) inset;
+}
+
+.form fieldset .col.error label.error {
+  color: #d55;
+  font-size: 12px;
+  margin: 5px 0 0 0;
+}
+
+.form .form_separator {
+  background: #666666;
+  height: 2px;
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+.form fieldset .col.unsubscribe .unsubscribe_radio {
+  display: inline;
+  font-size: 14px;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+.form fieldset .col.unsubscribe_date input {
+  /* subtract 26px from width so the datepicker image has room (quarter = 162) */
+  margin-right: 10px;
+  width: 136px;
+}
+
+.form fieldset .col.birth_date input {
+  /* subtract 26px from width so the datepicker image has room (half = 358) */
+  margin-right: 10px;
+  width: 332px;
+}
+
+.form fieldset .col .ui-datepicker-trigger {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 0;
+  min-width: auto;
+  padding: 0;
+}
+
+.form fieldset .col.notes textarea {
+  height: 100px;
+}
+
+.form fieldset.buttons.buttons-top {
+  margin-bottom: 15px;
+}
+
+.form fieldset.buttons-top .buttons_right {
+  float: right;
+  margin-right: 2%;
+}
+
+.form fieldset.buttons-top label {
+  display: inline;
+}
+
+.form fieldset.buttons {
+  margin-bottom: 0;
+}
+
+.form fieldset.buttons .buttons_right {
+  float: right;
+  margin-right: 2%;
+}
+
+.form fieldset.buttons label {
+  display: inline;
+}
+
+.form fieldset.duplicates {
+  border-radius: 4px;
+  display: none;
+  margin-bottom: 0;
+  margin-right: 2%;
+  padding: 18px;
+}
+
+.form fieldset.duplicates .duplicates_header {
+  color: #000;
+  font-size: 14px;
+}
+
+.form fieldset.duplicates .duplicates_list li {
+  margin-bottom: 4px;
+}
+
+.form fieldset.duplicates .duplicates_list li a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.form fieldset.duplicates .duplicates_list li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.form fieldset.duplicates .duplicates_buttons p {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px 20px 0 0;
+  padding: 0;
+
+  *display:inline;
+  *zoom:1;
+}
+
+.form fieldset.duplicates .duplicates_buttons .button {
+  margin-right: 10px;
+}

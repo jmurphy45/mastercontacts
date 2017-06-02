@@ -10,7 +10,9 @@
   <body>
     <%= render 'shared/header' %>
     <div id="wrapper">
-      <%= yield %>
+      <div id="wrapper_bg" class="gradient blue lists">
+        <%= yield %>
+      </div>
     </div>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

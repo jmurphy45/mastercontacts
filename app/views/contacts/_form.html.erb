@@ -1,77 +1,120 @@
-<%= form_for(contact) do |f| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+<div class="content">
+  <%= form_for(contact, id: 'contacts_form') do |f| %>
+      <div class="contact form add_contact">
+        <% if contact.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-      <ul>
-      <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+              <ul>
+                <% contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half fname">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+          <div class="col col_half lname">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+        </fieldset>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half address1">
+            <div class="col col_half company">
+              <%= f.label :company %>
+              <%= f.text_field :company %>
+            </div>
+          </div>
+          <div class="col col_half address2">
+            <%= f.label :street1 %>
+            <%= f.text_field :street1 %>
+          </div>
+        </fieldset>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half city">
+            <%= f.label :street2 %>
+            <%= f.text_field :street2 %>
+          </div>
+          <div class="col col_quarter state">
+            <%= f.label :city %>
+            <%= f.text_field :city %>
+          </div>
+          <div class="col col_quarter zip">
+            <%= f.label :state %>
+            <%= f.text_field :state %>
+          </div>
+        </fieldset>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half email">
+            <%= f.label :zip %>
+            <%= f.date_select :zip %>
+          </div>
+          <div class="col col_half unsubscribe">
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+          </div>
+
+        </fieldset>
+
+        <div class="form_separator"></div>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half business_phone">
+            <%= f.label :business_phone %>
+            <%= f.text_field :business_phone %>
+          </div>
+          <div class="col col_half secondary_business_phone">
+            <%= f.label :mobile %>
+            <%= f.text_field :mobile %>
+          </div>
+        </fieldset>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half primary_class">
+            <%= f.label :primary_class %>
+            <%= f.text_field :primary_class %>
+          </div>
+          <div class="col col_half secondary_class">
+            <div class="col col_half sig_primary_contact">
+
+            </div>
+
+                                                                                                                                                                                                                 </select> -->
+          </div>
+        </fieldset>
+
+        <fieldset class="cols clearfix">
+          <div class="col col_half birth_date">
+            <%= f.label :birth_date %>
+            <%= f.date_select :birth_date %>
+          </div>
+        </fieldset>
+
+        <fieldset class="cols">
+          <div class="col notes">
+            <label for="notes">Notes</label>
+            <%= f.label :notes %>
+            <%= f.date_select :notes %>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="buttons">
+          <div class="buttons_right">
+            <!-- <a href="#" class="button gradient new_blue save_similar">Save &amp; Add Similar</a> -->
+            <a href="#" class="button gradient new_blue save_similar_v2">Save &amp; Add Similar</a>
+            <%= f.submit class: 'button gradient new_blue submit' %>
+          </div>
+          <div style="float:left; margin-right:5px;">* Required fields</div>
+        </fieldset>
+      </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company %>
-    <%= f.text_field :company %>
-  </div>
-
-  <div class="field">
-    <%= f.label :street1 %>
-    <%= f.text_field :street1 %>
-  </div>
-
-  <div class="field">
-    <%= f.label :street2 %>
-    <%= f.text_field :street2 %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= f.label :state %>
-    <%= f.text_field :state %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :business_phone %>
-    <%= f.text_field :business_phone %>
-  </div>
-
-  <div class="field">
-    <%= f.label :mobile %>
-    <%= f.text_field :mobile %>
-  </div>
-
-  <div class="field">
-    <%= f.label :birth_date %>
-    <%= f.date_select :birth_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :primary_class %>
-    <%= f.text_field :primary_class %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
