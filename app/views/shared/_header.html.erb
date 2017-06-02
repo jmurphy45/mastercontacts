@@ -1,0 +1,35 @@
+<div id="headerwrapper">
+  <div id="header-content" class="clearfix main_header">
+
+    <h1>Welcome, Jay Murphy!</h1>
+  </div>
+  <ul id="nav_bar">
+    <li class="logout">
+      <a href="#">Logout</a>
+    </li>
+    <li class="reports current">
+      <a href="#">Manage Contacts</a>
+      <ul>
+        <li><a href="#">Expired Contacts</a></li>
+      </ul>
+    </li>
+    <li class="lists">
+      <a href="#">System Admin</a>
+      <ul>
+        <li><a href="#">Users</a></li>
+        <li><%= link_to 'Companies', companies_path %></li>
+        -->
+      </ul>
+    </li>
+    <li class="export">
+      <a href="#t">Export</a>
+    </li>
+    <li class="import">
+      <a href="#">Import</a>
+    </li>
+    <li class="add_contact">
+      <%= link_to 'Add Contacts', new_contact_path %>
+    </li>
+  </ul>
+</div>
+<!--https://stackoverflow.com/questions/17658905/devise-change-any-users-password-as-admin-->
