@@ -1,7 +1,7 @@
 <div id="headerwrapper">
   <div id="header-content" class="clearfix main_header">
 
-    <h1>Welcome, Jay Murphy!</h1>
+    <h1>Welcome, <%= (current_user)? current_user.email : 'No user' %>!</h1>
   </div>
   <ul id="nav_bar">
     <li class="logout">
